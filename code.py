@@ -10,7 +10,6 @@ db = MySQLdb.connect(host='localhost', user = 'root', passwd= 'root', db = 'myda
 cur = db.cursor()
 
 #cur.execute("CREATE DATABASE mydatabase") create a database if database does not exist already
-
 # to show databases 
 cur.execute("SHOW DATABASES")
 
@@ -24,7 +23,7 @@ for item in cur:
 ####################
 
 #####insert multiply data into the table we created 
-sqlquery = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+sqlquery = "INSERT INTO tablename (name, address) VALUES (%s, %s)"
 content = [
   ('James', 'Teacher'),
   ('Chuks', 'Engineer'),
